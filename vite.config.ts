@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  base: '/',
+const repoName = 'portfolio-template';
+
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? `/${repoName}/` : '/',
   build: {
     outDir: 'docs',
   },
@@ -10,4 +12,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+}));
