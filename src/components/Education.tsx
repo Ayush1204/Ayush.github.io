@@ -6,51 +6,51 @@ const EDUCATION = [
     degree: 'B.Tech in Electronics & Communication Engineering',
     school: 'LDRP Institute of Technology and Research, Gandhinagar',
     period: '2014 — 2018',
-    detail: 'Relevant coursework: Software Engineering, Database Management Systems, Computer Networks, Programming in C/C++.',
+    detail: 'Built a strong foundation in software engineering, networking, databases, and programming fundamentals.',
   },
   {
     degree: 'Microsoft Azure Fundamentals (AZ-900) & AI Fundamentals (AI-900)',
     school: 'Microsoft',
     period: '2023',
-    detail: 'Completed foundational cloud and AI certifications to strengthen modern QA and automation practices.',
+    detail: 'Expanded modern cloud and AI fluency to strengthen QA strategy in data-driven delivery environments.',
   },
 ];
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section id="education" className="px-6 py-24 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="mb-12"
         >
-          <p className="text-primary-400 font-medium mb-2 tracking-wide">Background</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Education & <span className="gradient-text">Certifications</span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-sky-600 dark:text-sky-300">Background</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+            Education & <span className="gradient-text">certifications</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {EDUCATION.map((item, i) => (
-            <motion.div
-              key={i}
+            <motion.article
+              key={item.degree}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass rounded-2xl p-6 hover:glow transition-all"
+              className="apple-card p-6"
             >
-              <div className="flex items-center gap-2 mb-2">
-                <GraduationCap size={18} className="text-primary-400" />
-                <h3 className="font-semibold text-white">{item.degree}</h3>
+              <div className="mb-3 flex items-center gap-2">
+                <GraduationCap size={18} className="text-sky-600 dark:text-sky-300" />
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{item.degree}</h3>
               </div>
-              <p className="text-sm text-gray-400 mb-1">{item.school}</p>
-              <p className="text-xs text-gray-500 mb-3">{item.period}</p>
-              <p className="text-sm text-gray-400">{item.detail}</p>
-            </motion.div>
+              <p className="text-sm text-slate-600 dark:text-slate-300">{item.school}</p>
+              <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{item.period}</p>
+              <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">{item.detail}</p>
+            </motion.article>
           ))}
         </div>
       </div>

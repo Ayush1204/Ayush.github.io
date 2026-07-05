@@ -7,9 +7,9 @@ const EXPERIENCE = [
     company: 'Accenture',
     period: 'Mar 2025 — Present',
     points: [
-      'Leveraged Agentic AI tools to design and optimize scalable ETL pipelines with data quality profiling for Dataverse data products.',
-      'Architected and built the GenAI module UI with WebSockets, delivering a ChatGPT-like experience for querying data products.',
-      'Mentored junior engineers on Agentic AI development and GenAI integration practices.',
+      'Led automation strategy for data products and GenAI-enabled workflows.',
+      'Built experience-driven UI for intelligent data interactions using modern web technologies.',
+      'Mentored engineers on quality-first practices and scalable delivery.',
     ],
   },
   {
@@ -17,9 +17,9 @@ const EXPERIENCE = [
     company: 'Accenture',
     period: 'Dec 2022 — Mar 2025',
     points: [
-      'Architected regression automation across enterprise applications, improving coverage consistency by 40% and reducing release cycle time.',
-      'Built a Cypress + TypeScript automation framework from scratch using the Page Object Model for a greenfield project.',
-      'Developed REST Assured and Postman API automation that reduced manual API testing effort from 3 days to 45 minutes.',
+      'Architected regression automation to boost test stability and release confidence.',
+      'Delivered Cypress + TypeScript frameworks from the ground up for greenfield products.',
+      'Reduced manual API testing effort dramatically with API automation.',
     ],
   },
   {
@@ -27,58 +27,60 @@ const EXPERIENCE = [
     company: 'Accenture',
     period: 'Dec 2019 — Dec 2022',
     points: [
-      'Designed automated test scripts using Java + Selenium WebDriver and TestNG for repeatable cross-browser coverage.',
-      'Authored comprehensive manual, exploratory, and regression test cases and improved defect detection before release.',
-      'Performed API validation testing for RESTful services to ensure data integrity and contract compliance.',
+      'Designed Java + Selenium test suites for browser and regression coverage.',
+      'Improved defect detection through structured manual and exploratory testing.',
+      'Validated REST APIs to ensure dependable service behavior and data integrity.',
     ],
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="px-6 py-24 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="mb-12"
         >
-          <p className="text-primary-400 font-medium mb-2 tracking-wide">Career</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Work <span className="gradient-text">Experience</span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-sky-600 dark:text-sky-300">Career</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+            Work <span className="gradient-text">experience</span>
           </h2>
         </motion.div>
 
-        <div className="relative border-l border-white/10 ml-4 space-y-10">
+        <div className="space-y-6">
           {EXPERIENCE.map((job, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+            <motion.article
+              key={job.role}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative pl-8"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="apple-card p-6 sm:p-8"
             >
-              <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gradient-to-r from-green-400 to-blue-500 glow" />
-              <div className="glass rounded-2xl p-6 hover:border-primary-400/30 transition-all">
-                <div className="flex items-center gap-2 mb-1">
-                  <Briefcase size={16} className="text-primary-400" />
-                  <h3 className="text-lg font-semibold text-white">{job.role}</h3>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <div className="mb-2 flex items-center gap-2">
+                    <Briefcase size={16} className="text-sky-600 dark:text-sky-300" />
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{job.role}</h3>
+                  </div>
+                  <p className="text-slate-600 dark:text-slate-300">{job.company}</p>
                 </div>
-                <p className="text-sm text-gray-400 mb-1">{job.company}</p>
-                <p className="text-xs text-gray-500 mb-4">{job.period}</p>
-                <ul className="space-y-2">
-                  {job.points.map((point, j) => (
-                    <li key={j} className="text-sm text-gray-400 flex gap-2">
-                      <span className="text-primary-400 mt-1">•</span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+                <div className="apple-pill">{job.period}</div>
               </div>
-            </motion.div>
+
+              <ul className="mt-5 space-y-3">
+                {job.points.map((point, j) => (
+                  <li key={j} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-sky-500" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.article>
           ))}
         </div>
       </div>

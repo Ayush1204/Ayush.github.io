@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 
@@ -12,44 +12,43 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sent'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // TODO: wire this up to EmailJS, a form backend, or your own API.
     setStatus('sent');
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="contact" className="px-6 py-24 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="mb-12"
         >
-          <p className="text-primary-400 font-medium mb-2 tracking-wide">Contact</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Let's <span className="gradient-text">Work Together</span>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-sky-600 dark:text-sky-300">Contact</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+            Let’s <span className="gradient-text">work together</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="md:col-span-2 space-y-4"
+            className="space-y-4"
           >
             {CONTACT_INFO.map((item) => (
-              <div key={item.label} className="glass rounded-2xl p-5 flex items-center gap-4">
-                <div className="p-2.5 rounded-full bg-gradient-to-r from-green-400/20 to-blue-500/20">
-                  <item.icon size={18} className="text-primary-400" />
+              <div key={item.label} className="apple-card flex items-center gap-4 p-5">
+                <div className="rounded-full bg-sky-500/10 p-3 text-sky-600 dark:text-sky-300">
+                  <item.icon size={18} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">{item.label}</p>
-                  <p className="text-sm text-gray-200">{item.value}</p>
+                  <p className="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">{item.label}</p>
+                  <p className="mt-1 text-sm text-slate-700 dark:text-slate-200">{item.value}</p>
                 </div>
               </div>
             ))}
@@ -61,35 +60,35 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             onSubmit={handleSubmit}
-            className="md:col-span-3 glass rounded-2xl p-6 space-y-4"
+            className="apple-card space-y-4 p-6 sm:p-8"
           >
             <input
               type="text"
-              placeholder="Ayush Jain"
+              placeholder="Your name"
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary-400/50"
+              className="w-full rounded-2xl border border-slate-200/80 bg-white/70 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-sky-400 dark:border-white/10 dark:bg-slate-900/70 dark:text-white"
             />
             <input
               type="email"
-              placeholder="ayush4u16@gmail.com"
+              placeholder="Your email"
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary-400/50"
+              className="w-full rounded-2xl border border-slate-200/80 bg-white/70 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-sky-400 dark:border-white/10 dark:bg-slate-900/70 dark:text-white"
             />
             <textarea
-              placeholder="Your Message"
+              placeholder="Tell me about your project"
               required
               rows={4}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary-400/50 resize-none"
+              className="w-full resize-none rounded-2xl border border-slate-200/80 bg-white/70 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition focus:border-sky-400 dark:border-white/10 dark:bg-slate-900/70 dark:text-white"
             />
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white font-semibold glow hover:glow-strong transition-all"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.01] dark:bg-white dark:text-slate-950"
             >
               <Send size={16} />
               {status === 'sent' ? 'Message Sent' : 'Send Message'}

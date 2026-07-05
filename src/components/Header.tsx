@@ -26,27 +26,27 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'glass py-3' : 'py-5'
+        scrolled ? 'glass mx-4 mt-4 rounded-full py-3' : 'py-5'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold gradient-text">
-          Ayush Jain
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6">
+        <a href="#" className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
+          Ayush <span className="gradient-text">Jain</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-7 md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-300 hover:text-white transition-colors"
+              className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
             >
               {link.label}
             </a>
           ))}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full glass hover:glow transition-all"
+            className="rounded-full border border-slate-200/80 bg-white/70 p-2 text-slate-700 transition-all hover:scale-105 dark:border-white/10 dark:bg-slate-800/70 dark:text-slate-300"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
@@ -54,7 +54,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden text-white"
+          className="text-slate-700 dark:text-slate-200 md:hidden"
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
         >
@@ -68,15 +68,15 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass mt-3 mx-4 rounded-xl overflow-hidden"
+            className="mx-4 mt-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/70 md:hidden"
           >
-            <div className="flex flex-col p-4 gap-3">
+            <div className="flex flex-col gap-3 p-4">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
+                  className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
                 >
                   {link.label}
                 </a>
