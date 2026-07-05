@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const repoName = 'portfolio-template';
+const repoName = 'Ayush.github.io';
 
 export default defineConfig(({ command }) => ({
   base: command === 'build' ? `/${repoName}/` : '/',
