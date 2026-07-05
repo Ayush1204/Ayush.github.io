@@ -1,4 +1,4 @@
-# Ignore dependencies and system files
+# Cleanup node_modules and system files
 node_modules/
 .DS_Store
 dist/
