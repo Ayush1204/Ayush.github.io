@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-const repoName = 'Ayush.github.io';
-
 export default defineConfig({
-  base: `/${repoName}/`,
+  base: './',
   build: {
     outDir: 'docs',
     emptyOutDir: true,
