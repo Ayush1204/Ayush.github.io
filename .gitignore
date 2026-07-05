@@ -1,0 +1,7 @@
+# Ignore dependencies and system files
+node_modules/
+.DS_Store
+dist/
+.env
+.vscode/
+*.log
