@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowRight, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
-import profilePhoto from '../assets/profile-photo.jpg';
+import profilePhoto from '..docs/assets/profile-photo.jpg';
 
 const QUICK_POINTS = [
   { title: '6+ years', text: 'Quality engineering & test automation' },
