@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Change this to your GitHub repository name if it differs.
-const repoName = 'portfolio-template';
-
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? `/${repoName}/` : '/',
+export default defineConfig({
+  base: '/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,
@@ -14,4 +11,4 @@ export default defineConfig(({ command }) => ({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-}));
+});
