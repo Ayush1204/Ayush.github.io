@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl text-gray-200 font-semibold mb-6"
         >
-          Senior QA Engineer & Test Automation Lead
+          Senior Test Automation Engineer
         </motion.h2>
 
         <motion.p
