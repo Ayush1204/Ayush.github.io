@@ -79,7 +79,7 @@ export default function Hero() {
 
           <div className="mb-6 overflow-hidden rounded-[24px] border border-slate-200/70 bg-slate-50/80 p-2 dark:border-white/10 dark:bg-slate-800/60">
             <img
-              src="/profile-photo.jpg"
+              src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
               alt="Ayush Jain"
               className="h-72 w-full rounded-[20px] object-cover object-center"
             />
