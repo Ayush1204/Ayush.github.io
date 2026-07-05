@@ -3,21 +3,33 @@ import { Briefcase } from 'lucide-react';
 
 const EXPERIENCE = [
   {
-    role: 'Your Role',
-    company: 'Company Name',
-    period: 'Month Year — Present',
+    role: 'Senior Software Engineer',
+    company: 'Accenture',
+    period: 'Mar 2025 — Present',
     points: [
-      'A concrete achievement or responsibility, ideally with a number.',
-      'Another impact you had in this role.',
+      'Leveraged Agentic AI tools to design and optimize scalable ETL pipelines with data quality profiling for Dataverse data products.',
+      'Architected and built the GenAI module UI with WebSockets, delivering a ChatGPT-like experience for querying data products.',
+      'Mentored junior engineers on Agentic AI development and GenAI integration practices.',
     ],
   },
   {
-    role: 'Previous Role',
-    company: 'Previous Company',
-    period: 'Month Year — Month Year',
+    role: 'Senior Software Test Engineer',
+    company: 'Accenture',
+    period: 'Dec 2022 — Mar 2025',
     points: [
-      'A concrete achievement or responsibility, ideally with a number.',
-      'Another impact you had in this role.',
+      'Architected regression automation across enterprise applications, improving coverage consistency by 40% and reducing release cycle time.',
+      'Built a Cypress + TypeScript automation framework from scratch using the Page Object Model for a greenfield project.',
+      'Developed REST Assured and Postman API automation that reduced manual API testing effort from 3 days to 45 minutes.',
+    ],
+  },
+  {
+    role: 'Software Test Engineer',
+    company: 'Accenture',
+    period: 'Dec 2019 — Dec 2022',
+    points: [
+      'Designed automated test scripts using Java + Selenium WebDriver and TestNG for repeatable cross-browser coverage.',
+      'Authored comprehensive manual, exploratory, and regression test cases and improved defect detection before release.',
+      'Performed API validation testing for RESTful services to ensure data integrity and contract compliance.',
     ],
   },
 ];

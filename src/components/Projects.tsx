@@ -3,19 +3,19 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const PROJECTS = [
   {
-    title: 'Project One',
-    description: 'One or two sentences describing the project and the problem it solves.',
-    tags: ['Tag A', 'Tag B', 'Tag C'],
+    title: 'Enterprise Regression Automation Suite',
+    description: 'Led regression automation across multiple concurrent enterprise applications, improving coverage consistency by 40% and accelerating release readiness.',
+    tags: ['Java', 'Selenium', 'TestNG', 'CI/CD'],
   },
   {
-    title: 'Project Two',
-    description: 'One or two sentences describing the project and the problem it solves.',
-    tags: ['Tag A', 'Tag D'],
+    title: 'Cypress + POM UI Framework',
+    description: 'Built a Cypress and TypeScript framework from scratch using the Page Object Model for a greenfield project, enabling early automated UI testing.',
+    tags: ['Cypress', 'TypeScript', 'POM', 'Cross-browser'],
   },
   {
-    title: 'Project Three',
-    description: 'One or two sentences describing the project and the problem it solves.',
-    tags: ['Tag B', 'Tag E'],
+    title: 'GenAI Data Intelligence Module',
+    description: 'Architected and shipped a GenAI module UI and backend integrations using Python, WebSockets, and Agentic AI-assisted development practices.',
+    tags: ['Python', 'GenAI', 'WebSockets', 'Agentic AI'],
   },
 ];
 
@@ -60,10 +60,10 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="View code">
+                <a href="https://github.com/Ayush1204" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="View code">
                   <Github size={18} />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="View live">
+                <a href="https://www.linkedin.com/in/ayush-jain-45a396117/" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="View live">
                   <ExternalLink size={18} />
                 </a>
               </div>

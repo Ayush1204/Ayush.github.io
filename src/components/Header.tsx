@@ -31,7 +31,7 @@ export default function Header() {
     >
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="text-xl font-bold gradient-text">
-          Your Name
+          Ayush Jain
         </a>
 
         <div className="hidden md:flex items-center gap-8">

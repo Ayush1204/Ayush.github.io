@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const STATS = [
-  { value: 'X+', label: 'Years Experience' },
-  { value: 'XX', label: 'Projects Delivered' },
-  { value: 'XX', label: 'Happy Clients' },
+  { value: '6+', label: 'Years Experience' },
+  { value: '95%+', label: 'Manual Effort Reduced' },
+  { value: '40%', label: 'Coverage Improvement' },
 ];
 
 export default function About() {
@@ -32,16 +32,16 @@ export default function About() {
             className="space-y-4 text-gray-400 leading-relaxed"
           >
             <p>
-              Write two or three short paragraphs about your background: what field you
-              work in, what you specialize in, and the kind of problems you enjoy solving.
+              I’m a Senior QA professional with 6+ years of experience architecting and scaling
+              test automation frameworks for enterprise and product-based applications.
             </p>
             <p>
-              Mention what drives you professionally and any notable focus areas — this is
-              a good place to set the tone before people scroll into your experience.
+              My work focuses on shift-left testing, automation strategy, and building quality-first
+              engineering practices that help teams release faster with confidence.
             </p>
             <p>
-              Optionally close with something personal — a hobby, interest, or value that
-              gives visitors a sense of who you are outside of work.
+              I’m especially interested in AI-assisted development, GenAI integration, and using
+              automation to improve both delivery speed and product reliability.
             </p>
           </motion.div>
 

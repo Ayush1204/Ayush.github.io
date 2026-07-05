@@ -3,16 +3,16 @@ import { GraduationCap } from 'lucide-react';
 
 const EDUCATION = [
   {
-    degree: 'Your Degree',
-    school: 'Institution Name',
-    period: 'Year — Year',
-    detail: 'Relevant honors, focus area, or coursework.',
+    degree: 'B.Tech in Electronics & Communication Engineering',
+    school: 'LDRP Institute of Technology and Research, Gandhinagar',
+    period: '2014 — 2018',
+    detail: 'Relevant coursework: Software Engineering, Database Management Systems, Computer Networks, Programming in C/C++.',
   },
   {
-    degree: 'Certification / Course',
-    school: 'Issuing Organization',
-    period: 'Year',
-    detail: 'What it covered or why it matters for your work.',
+    degree: 'Microsoft Azure Fundamentals (AZ-900) & AI Fundamentals (AI-900)',
+    school: 'Microsoft',
+    period: '2023',
+    detail: 'Completed foundational cloud and AI certifications to strengthen modern QA and automation practices.',
   },
 ];
 

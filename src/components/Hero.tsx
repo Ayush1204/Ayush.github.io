@@ -33,7 +33,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-extrabold mb-4"
         >
-          <span className="gradient-text">Your Name</span>
+          <span className="gradient-text">Ayush Jain</span>
         </motion.h1>
 
         <motion.h2
@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl text-gray-200 font-semibold mb-6"
         >
-          Your Title / Role
+          Senior QA Engineer & Test Automation Lead
         </motion.h2>
 
         <motion.p
@@ -51,8 +51,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          A one or two sentence summary of what you do, who you help, and what makes your
-          work distinctive. Keep it concrete and specific to you.
+          I’m a results-driven QA professional with 6+ years of experience building automation
+          frameworks, leading cross-functional teams, and driving quality from the ground up in
+          Agile environments.
         </motion.p>
 
         <motion.div
@@ -81,13 +82,13 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex items-center justify-center gap-5"
         >
-          <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
+          <a href="https://github.com/Ayush1204" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
             <Github size={22} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/ayush-jain-45a396117/" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
             <Linkedin size={22} />
           </a>
-          <a href="#contact" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="Email">
+          <a href="mailto:ayush4u16@gmail.com" className="text-gray-400 hover:text-primary-400 transition-colors" aria-label="Email">
             <Mail size={22} />
           </a>
         </motion.div>

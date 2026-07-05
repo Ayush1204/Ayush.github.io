@@ -2,27 +2,30 @@ import { motion } from 'framer-motion';
 
 const SKILL_GROUPS = [
   {
-    category: 'Category One',
+    category: 'Automation & Programming',
     skills: [
-      { name: 'Skill A', level: 90 },
-      { name: 'Skill B', level: 80 },
-      { name: 'Skill C', level: 75 },
+      { name: 'Java', level: 92 },
+      { name: 'Selenium WebDriver', level: 90 },
+      { name: 'Cypress', level: 88 },
+      { name: 'Python', level: 80 },
     ],
   },
   {
-    category: 'Category Two',
+    category: 'API & Testing',
     skills: [
-      { name: 'Skill D', level: 85 },
-      { name: 'Skill E', level: 70 },
-      { name: 'Skill F', level: 65 },
+      { name: 'REST Assured', level: 86 },
+      { name: 'Postman', level: 84 },
+      { name: 'Cucumber BDD', level: 82 },
+      { name: 'Playwright', level: 78 },
     ],
   },
   {
-    category: 'Category Three',
+    category: 'Quality & Delivery',
     skills: [
-      { name: 'Skill G', level: 88 },
-      { name: 'Skill H', level: 78 },
-      { name: 'Skill I', level: 60 },
+      { name: 'Shift-Left Testing', level: 90 },
+      { name: 'CI/CD with Jenkins', level: 85 },
+      { name: 'Docker & Kubernetes', level: 76 },
+      { name: 'JIRA & Agile', level: 88 },
     ],
   },
 ];

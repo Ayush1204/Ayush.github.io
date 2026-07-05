@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 
 const CONTACT_INFO = [
-  { icon: Mail, label: 'Email', value: 'you@example.com' },
-  { icon: Phone, label: 'Phone', value: '+1 (000) 000-0000' },
-  { icon: MapPin, label: 'Location', value: 'City, Country' },
+  { icon: Mail, label: 'Email', value: 'ayush4u16@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 8000371918' },
+  { icon: MapPin, label: 'Location', value: 'Ahmedabad, India' },
 ];
 
 export default function Contact() {
@@ -65,7 +65,7 @@ export default function Contact() {
           >
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="Ayush Jain"
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -73,7 +73,7 @@ export default function Contact() {
             />
             <input
               type="email"
-              placeholder="Your Email"
+              placeholder="ayush4u16@gmail.com"
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
